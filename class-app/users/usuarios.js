@@ -1,14 +1,20 @@
 export const usuarios =[
     {
         id: "estudiante",
-        text: "gabriel"
+        name: "gabriel",
+        mail: "sape@gmail.com",
+        contraseña: "sapeSapeSape"
     },
     {
         id: "estudiante",
-        text: "aaaaa"
+        name: "aaaaaaaaaa",
+        mail: "aa@gmail.com",
+        contraseña: "aaaaaa"
     },
     {
         id: "profesor",
-        text: "gabriel"
+        name: "Juan",
+        mail: "juan@gmail.com",
+        contraseña: "idkmen"
     }
 ]
