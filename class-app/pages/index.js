@@ -9,6 +9,7 @@ export default function Home() {
         <li><Link href="/register/profesor">Registro de profesor</Link></li>
         <li><Link href="/register/estudiante">Registro de estudiante</Link></li>
         <h6><Link href="https://www.youtube.com/watch?v=xvFZjo5PgG0"> c: </Link></h6>
+        <Link href="/login">Login</Link>
       </ul>
    </Fragment>
   )
