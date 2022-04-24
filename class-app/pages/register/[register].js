@@ -25,7 +25,7 @@ function registerPage() {
             alert(`Ya hay un usuario con este nombre`)
         }else {
             let newUser = {
-                id: type,
+                id: codeInputRef.current.value,
                 name: nameInputRef.current.value,
                 mail: mailInputRef.current.value,
                 contraseña: passwordInputRef.current.value
@@ -38,7 +38,7 @@ function registerPage() {
                 },
                 body: JSON.stringify(newUser)
             }
-            let r = await fetch("http://localhost:3000/api/user/" + type, config)
+            let r = await fetch("http://localhost:3000/api/user/" + codeInputRef.current.value, config)
             console.log(r)
             alert(`Se agrego el nuevo `+type)
         }
