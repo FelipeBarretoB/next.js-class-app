@@ -12,7 +12,6 @@ export default async function handler(req,res){
             mail: body.mail,
             password: body.password
         })
-        console.log("AAAAAAAAAAAAAAAAAA")
         res.send({
             response: usuarios.length
         })
