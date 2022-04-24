@@ -10,26 +10,18 @@ function registerPage() {
     const passwordConfirmInputRef = useRef();
     
     let checkName= async e=>{
-        //e.preventDefault();
-        
-        const res = await fetch('http://localhost:3000/api/return/'+nameInputRef)
-        return  await res.json();
+        const res = await fetch("http://localhost:3000/api/return/"+nameInputRef.current.value)
+        const r = await res.json();
+        return r
     }
     
 
     let submitHandler = async e => {
         e.preventDefault();
-        //console.log(type)
-      //  console.log(checkName()+"?")
-       
-      
-        
         if (passwordConfirmInputRef.current.value != passwordInputRef.current.value) {
-            alert(`The passwords dont match`)
-
-       // }else if{
-
-
+            alert(`Las contraseñas no son iguales`)
+        }else if(await checkName()){
+            alert(`Ya hay un usuario con este nombre`)
         }else {
             let newUser = {
                 id: type,
@@ -46,7 +38,7 @@ function registerPage() {
                 body: JSON.stringify(newUser)
             }
             let r = await fetch("http://localhost:3000/api/user/" + type, config)
-            // console.log(r); 
+            alert(`Se agrego el nuevo `+type)
         }
 
     }
