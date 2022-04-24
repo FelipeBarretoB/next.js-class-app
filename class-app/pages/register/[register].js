@@ -4,13 +4,14 @@ import { useRef } from 'react'
 function registerPage() {
     const router = useRouter();
     const type = router.query.register
+    const codeInputRef = useRef();
     const nameInputRef = useRef();
     const mailInputRef = useRef();
     const passwordInputRef = useRef();
     const passwordConfirmInputRef = useRef();
     
     let checkName= async e=>{
-        const res = await fetch("http://localhost:3000/api/return/"+nameInputRef.current.value)
+        const res = await fetch("http://localhost:3000/api/return/"+codeInputRef.current.value)
         const r = await res.json();
         return r
     }
@@ -38,6 +39,7 @@ function registerPage() {
                 body: JSON.stringify(newUser)
             }
             let r = await fetch("http://localhost:3000/api/user/" + type, config)
+            console.log(r)
             alert(`Se agrego el nuevo `+type)
         }
 
@@ -51,6 +53,11 @@ function registerPage() {
             <label>Nombre del {type}</label>
             <br></br>
             <input type='text' required id='name' placeholder='Nombre' ref={nameInputRef} ></input>
+        </div>
+        <div>
+            <label>Codigo del {type}</label>
+            <br></br>
+            <input type='text' required id='code' placeholder='Nombre' ref={codeInputRef} ></input>
         </div>
         <div>
             <label>Mail del {type}</label>
