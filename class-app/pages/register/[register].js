@@ -28,7 +28,8 @@ function registerPage() {
                 id: codeInputRef.current.value,
                 name: nameInputRef.current.value,
                 mail: mailInputRef.current.value,
-                contraseña: passwordInputRef.current.value
+                password: passwordInputRef.current.value,
+                userType: type
             }
             let config = {
                 method: 'POST',

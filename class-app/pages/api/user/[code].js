@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {usuarios} from "../../../users/usuarios"
 //profesor
 
@@ -6,7 +7,7 @@ export default async function handler(req,res){
     const {method, body}=req;
     if(method=== 'POST'){
         //console.log(req)
-        if (body.id == 'teacher') {
+        if (body.userType == 'profesor') {
             usuarios.teachers.push({
                 id: body.id,
                 name: body.name,

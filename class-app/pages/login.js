@@ -6,11 +6,7 @@ async function submitHandler(e) {
     e.preventDefault();
     let fields = e.target.elements
     
-    
-    
 }
-
-
 
 export default function login() {
     return <div className="container">
@@ -34,6 +30,6 @@ export default function login() {
             </form>
         </div>
         
-        <Link href="/">Return Home</Link>
+        <Link href="/">Return</Link>
     </div>
 }
