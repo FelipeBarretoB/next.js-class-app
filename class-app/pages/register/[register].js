@@ -10,7 +10,7 @@ function registerPage() {
     const passwordInputRef = useRef();
     const passwordConfirmInputRef = useRef();
     
-    let checkName= async e=>{
+    let checkId= async e=>{
         const res = await fetch("http://localhost:3000/api/return/"+codeInputRef.current.value)
         const r = await res.json();
         return r
@@ -21,8 +21,8 @@ function registerPage() {
         e.preventDefault();
         if (passwordConfirmInputRef.current.value != passwordInputRef.current.value) {
             alert(`Las contraseñas no son iguales`)
-        }else if(await checkName()){
-            alert(`Ya hay un usuario con este nombre`)
+        }else if(await checkId()){
+            alert(`Ya hay un usuario con este ID`)
         }else {
             let newUser = {
                 id: codeInputRef.current.value,

@@ -1,14 +1,53 @@
 // import { Fragment } from "react"
 import Link from "next/link" // para que no se refresque la pagina
+import { useRouter } from "next/router";
 import users from '../users/usuarios'
 
-async function submitHandler(e) {
-    e.preventDefault();
-    let fields = e.target.elements
-    
-}
 
 export default function login() {
+    const router = useRouter()
+
+    async function userExists(id, password){
+        // const res = await fetch("http://localhost:3000/api/return/"+id)
+        // const r = await res.json();
+        // return r
+        let config = {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }
+        // console.log(id)
+        let r = {};
+        await fetch("http://localhost:3000/api/user/" + id, config).then(response => response.json()).then(data => {
+            //console.log(data)
+            r = data
+        })
+        // Console logs for testing
+        // console.log(r)
+        // console.log(r.id)
+        // console.log(r.contraseña)
+        if (r.id == id && r.contraseña == password) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    async function submitHandler(e) {
+        e.preventDefault();
+        let fields = e.target.elements
+        if (await userExists(fields.code.value, fields.studentPassword.value)) {
+            router.push('/') // -> To Home
+        } else {
+            alert("No existe ese usuario")
+        }
+    
+        
+    }
+
+
     return <div className="container">
         <h1 className="display-4">Login Page</h1>
         <div className="border border-info rounded p-3">
@@ -21,10 +60,6 @@ export default function login() {
                 <div className="mb-3">
                     <label  className="form-label">Password</label>
                     <input type="password" className="form-control" name="studentPassword" />
-                </div>
-                <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>

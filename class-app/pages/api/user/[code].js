@@ -7,35 +7,22 @@ export default async function handler(req,res){
     const {method, body}=req;
     if(method=== 'POST'){
         //console.log(req)
-        if (body.userType == 'profesor') {
-            usuarios.teachers.push({
+            usuarios.push({
                 id: body.id,
                 name: body.name,
                 mail: body.mail,
-                password: body.password
+                password: body.password,
+                userType: body.userType
             })
-        } else {
-            usuarios.students.push({
-                id: body.id,
-                name: body.name,
-                mail: body.mail,
-                password: body.password
-            })
-        }
+
         res.send({
-            response: usuarios.students.length + usuarios.teachers.length
+            response: usuarios.length
         })
 
-    }else{
+    } else {
         const {code}= req.query
-        const studentsFilter = usuarios.students.filter((student)=>student.id === code)
-        const teachersFilter = usuarios.teachers.filter((teacher) => teacher.id === code)
-        console.log(studentsFilter)
-        console.log(teachersFilter)
-        res.status(200).json({
-            students: studentsFilter,
-            teachers: teachersFilter
-        })  
+        const users = usuarios.filter((user)=>user.id === code)
+        console.log(JSON.stringify(users[0]) + "------------")
+        res.send(users[0])  
     }
-    
 }
