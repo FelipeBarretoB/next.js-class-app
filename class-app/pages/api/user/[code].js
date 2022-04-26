@@ -22,7 +22,6 @@ export default async function handler(req,res){
     } else {
         const {code}= req.query
         const users = usuarios.filter((user)=>user.id === code)
-        console.log(JSON.stringify(users[0]) + "------------")
         res.send(users[0])  
     }
 }
