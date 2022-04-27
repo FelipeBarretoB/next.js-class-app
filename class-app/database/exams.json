@@ -1,0 +1,136 @@
+{
+    "count": 1,
+    "exams": [
+        {
+            "name": "Examen de Programación I",
+            "questions": [
+                {
+                    "question": "Cómo no se inicia una variable en Javascript?",
+                    "answers": [
+                        {
+                            "id": "a",
+                            "answer": "let varName = value",
+                            "correct": false
+                        },
+                        {
+                            "id": "b",
+                            "answer": "start varName = value",
+                            "correct": true
+                        },
+                        {
+                            "id": "c",
+                            "answer": "var varName = value",
+                            "correct": false
+                        },
+                        {
+                            "id": "d",
+                            "answer": "const varName = value",
+                            "correct": false
+                        }
+                    ]
+                },
+                {
+                    "question": "Cómo se inicializa un arreglo en Javascript?",
+                    "answers": [
+                        {
+                            "id": "a",
+                            "answer": "let arr = {}",
+                            "correct": false
+                        },
+                        {
+                            "id": "b",
+                            "answer": "arr arreglo = []",
+                            "correct": false
+                        },
+                        {
+                            "id": "c",
+                            "answer": "let arr = {[]}",
+                            "correct": false
+                        },
+                        {
+                            "id": "d",
+                            "answer": "let arreglo = []",
+                            "correct": true
+                        }
+                    ]
+                },
+                {
+                    "question": "Cómo se inicializa un objeto en Javascript?",
+                    "answers": [
+                        {
+                            "id": "a",
+                            "answer": "let obj = {}",
+                            "correct": true
+                        },
+                        {
+                            "id": "b",
+                            "answer": "object object = {}",
+                            "correct": false
+                        },
+                        {
+                            "id": "c",
+                            "answer": "let obj = [{[]}]",
+                            "correct": false
+                        },
+                        {
+                            "id": "d",
+                            "answer": "let arreglo = []",
+                            "correct": false
+                        }
+                    ]
+                },
+                {
+                    "question": "Cual no es un framework de Javascript?",
+                    "answers": [
+                        {
+                            "id": "a",
+                            "answer": "ReactJs",
+                            "correct": false
+                        },
+                        {
+                            "id": "b",
+                            "answer": "VueJs",
+                            "correct": false
+                        },
+                        {
+                            "id": "c",
+                            "answer": "JiraJs",
+                            "correct": true
+                        },
+                        {
+                            "id": "d",
+                            "answer": "NestJs",
+                            "correct": false
+                        }
+                    ]
+                },
+                {
+                    "question": "Con que motor corre Javascript en el navegador?",
+                    "answers": [
+                        {
+                            "id": "a",
+                            "answer": "Javascript Engine Motor",
+                            "correct": false
+                        },
+                        {
+                            "id": "b",
+                            "answer": "V8 Javascript Engine",
+                            "correct": true
+                        },
+                        {
+                            "id": "c",
+                            "answer": "Javascript Reader Compiler",
+                            "correct": false
+                        },
+                        {
+                            "id": "d",
+                            "answer": "JS Web Engine",
+                            "correct": false
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}
