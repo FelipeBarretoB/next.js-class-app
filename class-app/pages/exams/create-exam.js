@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react';
+import Formulary from '../Components/Formulary';
 //import { useRef } from 'react'
 
 function About(props) {
@@ -23,38 +24,24 @@ function CreateExamsPage() {
         a++
         return a
     }
-/*
-    const sape = [
-        {
-            name: "Sape1"
-        },
-        {
-            name: "Sape2"
-        },
-        {
-            name: "Sape3"
-        }
-    ]
-*/
-    
+
+    const forms = [1,2,3,4,5];
+
+    //const finalForm = forms.map((item) => {<Formulary form={item}/>});
+
+
 
     return <div>
-        <h1>crear examen</h1>
-        <form>
-            <div className="mb-3">
-                <label className="form-label">Pregunta #1</label>
-                <input type="text" className="form-control"></input>
-                <input type="radio"></input>
-            </div>
-            <input type="submit"></input>
-        </form>
- 
 
-
-
+    
+    <h1>crear examen</h1>
+    <form>
+        {forms.map((item) => {<Formulary form={item}/>})}
+        <input type="submit"></input>
+    </form>
+    
     </div>
 
 }
-
 
 export default CreateExamsPage;
