@@ -27,7 +27,8 @@
                             "answer": "const varName = value",
                             "correct": false
                         }
-                    ]
+                    ],
+                    "percentage": 20
                 },
                 {
                     "question": "Cómo se inicializa un arreglo en Javascript?",
@@ -52,7 +53,8 @@
                             "answer": "let arreglo = []",
                             "correct": true
                         }
-                    ]
+                    ],
+                    "percentage": 20
                 },
                 {
                     "question": "Cómo se inicializa un objeto en Javascript?",
@@ -77,7 +79,8 @@
                             "answer": "let arreglo = []",
                             "correct": false
                         }
-                    ]
+                    ],
+                    "percentage": 20
                 },
                 {
                     "question": "Cual no es un framework de Javascript?",
@@ -102,7 +105,8 @@
                             "answer": "NestJs",
                             "correct": false
                         }
-                    ]
+                    ],
+                    "percentage": 20
                 },
                 {
                     "question": "Con que motor corre Javascript en el navegador?",
@@ -127,7 +131,8 @@
                             "answer": "JS Web Engine",
                             "correct": false
                         }
-                    ]
+                    ],
+                    "percentage": 20
                 }
                 
             ]
