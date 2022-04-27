@@ -3,6 +3,8 @@
     "exams": [
         {
             "name": "Examen de Programación I",
+            "subject": "APO1",
+            "description": "Este examen va a tratar lo visto en las clases de APO1 del primer corte. Hablaremos de conceptos básicos de Javascript como las variables, arreglos, objetos, entre otros.",
             "questions": [
                 {
                     "question": "Cómo no se inicia una variable en Javascript?",

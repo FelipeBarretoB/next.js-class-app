@@ -25,14 +25,19 @@
 //     }
 // }
 
+let handleClick =  e => {
+    console.log("Doest nothing yet. Needs to show te exam")
+}
+
 
 function Card(props) {
     //console.log(props.name)
     return <div className="card border-success mb-3" style={{maxWidth: "18rem"}}>
-        <div className="card-header">{props.name}</div>
+        <div className="card-header">{props.subject}</div>
         <div className="card-body text-success">
         <h5 className="card-title">{props.name}</h5>
-        <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus illo reprehenderit blanditiis optio voluptatibus.</p>
+        <p className="card-text">{props.description}</p>
+        <button onClick={handleClick} type="button" className="btn btn-success">Empezar</button>
         </div>
   </div>
 }
@@ -64,7 +69,7 @@ function ExamsList({ data }){
         <h1>Exams List</h1>
         {data.exams.map((item) => {
             console.log(item.name)
-            return <Card key="{item}" name={item.name}/>
+            return <Card key="{item}" name={item.name} description={item.description} subject={item.subject}/>
         })}
     </div>
         
