@@ -1,1 +1,129 @@
-{"count":2,"exams":[{"name":"Examen de Programación I","subject":"APO1","description":"Este examen va a tratar lo visto en las clases de APO1 del primer corte. Hablaremos de conceptos básicos de Javascript como las variables, arreglos, objetos, entre otros.","questions":[{"question":"Cómo no se inicia una variable en Javascript?","answers":[{"id":"A","answer":"let varName = value"},{"id":"B","answer":"start varName = value"},{"id":"C","answer":"var varName = value"},{"id":"D","answer":"const varName = value"}],"correctAnswer":"B","percentage":20},{"question":"Cómo se inicializa un arreglo en Javascript?","answers":[{"id":"A","answer":"let arr = {}"},{"id":"B","answer":"arr arreglo = []"},{"id":"C","answer":"let arr = {[]}"},{"id":"D","answer":"let arreglo = []"}],"correctAnswer":"D","percentage":20},{"question":"Cómo se inicializa un objeto en Javascript?","answers":[{"id":"A","answer":"let obj = {}"},{"id":"B","answer":"object object = {}"},{"id":"C","answer":"let obj = [{[]}]"},{"id":"D","answer":"let arreglo = []"}],"correctAnswer":"A","percentage":20},{"question":"Cual no es un framework de Javascript?","answers":[{"id":"A","answer":"ReactJs"},{"id":"B","answer":"VueJs"},{"id":"C","answer":"JiraJs"},{"id":"D","answer":"NestJs"}],"correctAnswer":"C","percentage":20},{"question":"Con que motor corre Javascript en el navegador?","answers":[{"id":"A","answer":"Javascript Engine Motor"},{"id":"B","answer":"V8 Javascript Engine"},{"id":"C","answer":"Javascript Reader Compiler"},{"id":"D","answer":"JS Web Engine"}],"correctAnswer":"B","percentage":20}]},{"name":"sa","subject":"sa","description":"sa","questions":[{"question":"sa","answers":[{"id":"A","answer":"sa"},{"id":"B","answer":"sa"},{"id":"C","answer":"sa"},{"id":"D","answer":"sa"}],"correctAnswer":"C","percentage":20},{"question":"sa","answers":[{"id":"A","answer":"sa"},{"id":"B","answer":"sa"},{"id":"C","answer":"sa"},{"id":"D","answer":"sa"}],"correctAnswer":"D","percentage":20},{"question":"sa","answers":[{"id":"A","answer":"sa"},{"id":"B","answer":"sa"},{"id":"C","answer":"sa"},{"id":"D","answer":"sa"}],"correctAnswer":"A","percentage":20},{"question":"sa","answers":[{"id":"A","answer":"sa"},{"id":"B","answer":"sa"},{"id":"C","answer":"sa"},{"id":"D","answer":"sa"}],"correctAnswer":"B","percentage":20},{"question":"sa","answers":[{"id":"A","answer":"sa"},{"id":"B","answer":"sa"},{"id":"C","answer":"sa"},{"id":"D","answer":"sa"}],"correctAnswer":"D","percentage":20}]}]}
+{
+  "count": 2,
+  "exams": [
+    {
+      "name": "Examen de Programación I",
+      "subject": "APO1",
+      "description": "Este examen va a tratar lo visto en las clases de APO1 del primer corte. Hablaremos de conceptos básicos de Javascript como las variables, arreglos, objetos, entre otros.",
+      "questions": [
+        {
+          "question": "Cómo no se inicia una variable en Javascript?",
+          "answers": [
+            { "id": "A", "answer": "let varName = value" },
+            { "id": "B", "answer": "start varName = value" },
+            { "id": "C", "answer": "var varName = value" },
+            { "id": "D", "answer": "const varName = value" }
+          ],
+          "correctAnswer": "B",
+          "percentage": 20
+        },
+        {
+          "question": "Cómo se inicializa un arreglo en Javascript?",
+          "answers": [
+            { "id": "A", "answer": "let arr = {}" },
+            { "id": "B", "answer": "arr arreglo = []" },
+            { "id": "C", "answer": "let arr = {[]}" },
+            { "id": "D", "answer": "let arreglo = []" }
+          ],
+          "correctAnswer": "D",
+          "percentage": 20
+        },
+        {
+          "question": "Cómo se inicializa un objeto en Javascript?",
+          "answers": [
+            { "id": "A", "answer": "let obj = {}" },
+            { "id": "B", "answer": "object object = {}" },
+            { "id": "C", "answer": "let obj = [{[]}]" },
+            { "id": "D", "answer": "let arreglo = []" }
+          ],
+          "correctAnswer": "A",
+          "percentage": 20
+        },
+        {
+          "question": "Cual no es un framework de Javascript?",
+          "answers": [
+            { "id": "A", "answer": "ReactJs" },
+            { "id": "B", "answer": "VueJs" },
+            { "id": "C", "answer": "JiraJs" },
+            { "id": "D", "answer": "NestJs" }
+          ],
+          "correctAnswer": "C",
+          "percentage": 20
+        },
+        {
+          "question": "Con que motor corre Javascript en el navegador?",
+          "answers": [
+            { "id": "A", "answer": "Javascript Engine Motor" },
+            { "id": "B", "answer": "V8 Javascript Engine" },
+            { "id": "C", "answer": "Javascript Reader Compiler" },
+            { "id": "D", "answer": "JS Web Engine" }
+          ],
+          "correctAnswer": "B",
+          "percentage": 20
+        }
+      ]
+    },
+    {
+      "name": "sa",
+      "subject": "sa",
+      "description": "sa",
+      "questions": [
+        {
+          "question": "sa",
+          "answers": [
+            { "id": "A", "answer": "sa" },
+            { "id": "B", "answer": "sa" },
+            { "id": "C", "answer": "sa" },
+            { "id": "D", "answer": "sa" }
+          ],
+          "correctAnswer": "C",
+          "percentage": 20
+        },
+        {
+          "question": "sa",
+          "answers": [
+            { "id": "A", "answer": "sa" },
+            { "id": "B", "answer": "sa" },
+            { "id": "C", "answer": "sa" },
+            { "id": "D", "answer": "sa" }
+          ],
+          "correctAnswer": "D",
+          "percentage": 20
+        },
+        {
+          "question": "sa",
+          "answers": [
+            { "id": "A", "answer": "sa" },
+            { "id": "B", "answer": "sa" },
+            { "id": "C", "answer": "sa" },
+            { "id": "D", "answer": "sa" }
+          ],
+          "correctAnswer": "A",
+          "percentage": 20
+        },
+        {
+          "question": "sa",
+          "answers": [
+            { "id": "A", "answer": "sa" },
+            { "id": "B", "answer": "sa" },
+            { "id": "C", "answer": "sa" },
+            { "id": "D", "answer": "sa" }
+          ],
+          "correctAnswer": "B",
+          "percentage": 20
+        },
+        {
+          "question": "sa",
+          "answers": [
+            { "id": "A", "answer": "sa" },
+            { "id": "B", "answer": "sa" },
+            { "id": "C", "answer": "sa" },
+            { "id": "D", "answer": "sa" }
+          ],
+          "correctAnswer": "D",
+          "percentage": 20
+        }
+      ]
+    }
+  ]
+}
