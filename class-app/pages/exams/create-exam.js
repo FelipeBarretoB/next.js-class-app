@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 import Formulary from '../Components/Formulary';
+import Link from "next/link" // para que no se refresque la pagina
+
 //import { useRef } from 'react'
 
 function About(props) {
@@ -25,6 +27,11 @@ function CreateExamsPage() {
         return a
     }
 
+    let handleSubmit = e => {
+        e.preventDefault()
+        console.log("Sapetin")
+    }
+
     const forms = [1,2,3,4,5];
 
     //const finalForm = forms.map((item) => {<Formulary form={item}/>});
@@ -32,14 +39,16 @@ function CreateExamsPage() {
 
 
     return <div>
-
-    
-    <h1>crear examen</h1>
-    <form>
-        {forms.map((item) => {<Formulary form={item}/>})}
-        <input type="submit"></input>
-    </form>
-    
+        <h1 className='display-3 mx-auto text-center'>Crear Examen</h1>
+        <Link href="/exams"><a className='d-block text-center'>Regresar</a></Link>
+        <div className="container border border-info rounded p-3">
+            <form onSubmit={handleSubmit}>
+                {forms.map((item) => {
+                    return <Formulary key={item} form={item}/>
+                })}
+            <input type="submit"></input>
+            </form>
+        </div>
     </div>
 
 }

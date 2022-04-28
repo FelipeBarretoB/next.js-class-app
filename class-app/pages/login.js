@@ -65,6 +65,6 @@ export default function login() {
             </form>
         </div>
         
-        <Link href="/">Return</Link>
+        <Link href="/">Regresar</Link>
     </div>
 }

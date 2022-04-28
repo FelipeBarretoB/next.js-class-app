@@ -13,6 +13,7 @@ function ExamsPage(){
     <ul>
       <li><Link href="/exams/create-exam">Create exam</Link></li>
       <li><Link href="/exams/exams-list">View exams list</Link></li>
+      <li><Link href="/">Regresar</Link></li>
     </ul>
  </Fragment> 
         
