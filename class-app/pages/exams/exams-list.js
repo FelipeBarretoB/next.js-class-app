@@ -71,7 +71,7 @@ function ExamsList({ data }){
         <Link  href="/exams">Regresar</Link>
         {data.exams.map((item) => {
             console.log(item.name)
-            return <Card key="{item}" name={item.name} description={item.description} subject={item.subject}/>
+            return <Card key={item.name} name={item.name} description={item.description} subject={item.subject}/>
         })}
     </div>
         

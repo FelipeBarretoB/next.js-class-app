@@ -123,8 +123,11 @@ function CreateExamsPage() {
             },
             body: JSON.stringify(obj)
         }
-        let res = await fetch('http://localhost:3000/api/exams/createExam')
-        console.log(res)
+        let r
+        await fetch('http://localhost:3000/api/exams/createExam', config).then(response => response.json()).then(data => {
+            r = data
+        })
+        console.log(r)
     }
 
     return <div>
