@@ -10,130 +10,115 @@
                     "question": "Cómo no se inicia una variable en Javascript?",
                     "answers": [
                         {
-                            "id": "a",
-                            "answer": "let varName = value",
-                            "correct": false
+                            "id": "A",
+                            "answer": "let varName = value"
                         },
                         {
-                            "id": "b",
-                            "answer": "start varName = value",
-                            "correct": true
+                            "id": "B",
+                            "answer": "start varName = value"
                         },
                         {
-                            "id": "c",
-                            "answer": "var varName = value",
-                            "correct": false
+                            "id": "C",
+                            "answer": "var varName = value"
                         },
                         {
-                            "id": "d",
-                            "answer": "const varName = value",
-                            "correct": false
+                            "id": "D",
+                            "answer": "const varName = value"
                         }
                     ],
+                    "correctAnswer": "B",
                     "percentage": 20
                 },
                 {
                     "question": "Cómo se inicializa un arreglo en Javascript?",
                     "answers": [
                         {
-                            "id": "a",
-                            "answer": "let arr = {}",
-                            "correct": false
+                            "id": "A",
+                            "answer": "let arr = {}"
                         },
                         {
-                            "id": "b",
-                            "answer": "arr arreglo = []",
-                            "correct": false
+                            "id": "B",
+                            "answer": "arr arreglo = []"
                         },
                         {
-                            "id": "c",
-                            "answer": "let arr = {[]}",
-                            "correct": false
+                            "id": "C",
+                            "answer": "let arr = {[]}"
                         },
                         {
-                            "id": "d",
-                            "answer": "let arreglo = []",
-                            "correct": true
+                            "id": "D",
+                            "answer": "let arreglo = []"
                         }
                     ],
+                    "correctAnswer": "D",
                     "percentage": 20
                 },
                 {
                     "question": "Cómo se inicializa un objeto en Javascript?",
                     "answers": [
                         {
-                            "id": "a",
-                            "answer": "let obj = {}",
-                            "correct": true
+                            "id": "A",
+                            "answer": "let obj = {}"
                         },
                         {
-                            "id": "b",
-                            "answer": "object object = {}",
-                            "correct": false
+                            "id": "B",
+                            "answer": "object object = {}"
                         },
                         {
-                            "id": "c",
-                            "answer": "let obj = [{[]}]",
-                            "correct": false
+                            "id": "C",
+                            "answer": "let obj = [{[]}]"
                         },
                         {
-                            "id": "d",
-                            "answer": "let arreglo = []",
-                            "correct": false
+                            "id": "D",
+                            "answer": "let arreglo = []"
                         }
                     ],
+                    "correctAnswer": "A",
                     "percentage": 20
                 },
                 {
                     "question": "Cual no es un framework de Javascript?",
                     "answers": [
                         {
-                            "id": "a",
-                            "answer": "ReactJs",
-                            "correct": false
+                            "id": "A",
+                            "answer": "ReactJs"
                         },
                         {
-                            "id": "b",
-                            "answer": "VueJs",
-                            "correct": false
+                            "id": "B",
+                            "answer": "VueJs"
                         },
                         {
-                            "id": "c",
-                            "answer": "JiraJs",
-                            "correct": true
+                            "id": "C",
+                            "answer": "JiraJs"
                         },
                         {
-                            "id": "d",
-                            "answer": "NestJs",
-                            "correct": false
+                            "id": "D",
+                            "answer": "NestJs"
                         }
                     ],
+                    "correctAnswer":"C",
                     "percentage": 20
                 },
                 {
                     "question": "Con que motor corre Javascript en el navegador?",
                     "answers": [
                         {
-                            "id": "a",
-                            "answer": "Javascript Engine Motor",
-                            "correct": false
+                            "id": "A",
+                            "answer": "Javascript Engine Motor"
                         },
                         {
-                            "id": "b",
-                            "answer": "V8 Javascript Engine",
-                            "correct": true
+                            "id": "B",
+                            "answer": "V8 Javascript Engine"
                         },
                         {
-                            "id": "c",
-                            "answer": "Javascript Reader Compiler",
-                            "correct": false
+                            "id": "C",
+                            "answer": "Javascript Reader Compiler"
                         },
                         {
-                            "id": "d",
-                            "answer": "JS Web Engine",
-                            "correct": false
+                            "id": "D",
+                            "answer": "JS Web Engine"
                         }
                     ],
+                    "correctAnswer":"B",
                     "percentage": 20
                 }
                 

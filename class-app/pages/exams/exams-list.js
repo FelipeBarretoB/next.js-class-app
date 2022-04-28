@@ -1,3 +1,4 @@
+import Link from "next/link" // para que no se refresque la pagina
 // className PageSape extends React.Component {
 
 //     componentDidMount() {
@@ -67,7 +68,7 @@ function ExamsList({ data }){
     //const testId = router.query.testId;
     return <div>
         <h1 className='display-3 mx-auto text-center'>Exams List</h1>
-        <Link></Link>
+        <Link  href="/exams">Regresar</Link>
         {data.exams.map((item) => {
             console.log(item.name)
             return <Card key="{item}" name={item.name} description={item.description} subject={item.subject}/>
