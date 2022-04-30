@@ -1,33 +1,7 @@
 import Link from "next/link" // para que no se refresque la pagina
-// className PageSape extends React.Component {
-
-//     componentDidMount() {
-//        this.retrieveData()
-//     }
-
-//     async retrieveData() {
-//         let exams = {}
-//         let data = await fetch("http://localhost:3000/api/exams/returnExams").then(response => response.json()).then(data => {
-//             console.log(data.count)
-//             //console.log(data.count + "Aqui toy")
-//             exams = data
-//         })
-//         console.log("Im here")
-//         console.log(exams)
-//     }
-
-
-//     render() {
-//         return <div>
-//             <h1>Exams List</h1>
-//             <p>Sape</p>
-//         </div>
-
-//     }
-// }
 
 let handleClick =  e => {
-    console.log("Doest nothing yet. Needs to show te exam")
+    console.log("Doest nothing yet. Needs to show the exam")
 }
 
 
@@ -38,34 +12,13 @@ function Card(props) {
         <div className="card-body text-success">
         <h5 className="card-title">{props.name}</h5>
         <p className="card-text">{props.description}</p>
+        <p id="examId" style={{display: "none"}}>{props.id}</p>
         <button onClick={handleClick} type="button" className="btn btn-success">Empezar</button>
         </div>
   </div>
 }
  
 function ExamsList({ data }){
-    //const dataRef = useRef()
-
-    // let retrieveData = async e => {
-    //     let exams = {}
-    //     // let data = await fetch("http://localhost:3000/api/exams/returnExams").then(response => response.json()).then(data => {
-    //     //     //console.log(data.count + "Aqui toy")
-    //     //     exams = data
-    //     // })
-    //     // console.log(data)
-    //     // return exams.exams
-    //     return [{name: "Sape"}]
-    // }
-    //const arr = retrieveData(null)
-    //let sape = [arr]
-    // let exams = {}
-    // let data = fetch("http://localhost:3000/api/exams/returnExams").then(response => response.json()).then(data => exams = data)
-    // console.log(exams)
-    // exams = exams.exams
-
-    //const reactComp = useRef();
-    //const router = useRouter();
-    //const testId = router.query.testId;
     return <div>
         <h1 className='display-3 mx-auto text-center'>Exams List</h1>
         <Link  href="/exams">Regresar</Link>

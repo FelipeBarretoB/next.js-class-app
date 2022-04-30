@@ -35,7 +35,7 @@ function CreateExamsPage() {
         let name = document.getElementsByName('nombre')[0];
         let subject = document.getElementsByName('materia')[0];
         let description = document.getElementsByName('description')[0]
-        let exam = {name: name.value, subject: subject.value, description: description.value, questions: []}
+        let exam = {name: name.value, id: "", subject: subject.value, description: description.value, questions: []}
         for(let i = 0; i < forms.length; i++) {
             let percentage = document.getElementsByName('pregunta-'+forms[i]+"-porcentaje")[0]
             sumPercentages += parseInt(percentage.value);
