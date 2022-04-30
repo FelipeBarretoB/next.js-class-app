@@ -24,11 +24,13 @@ export default function login() {
             //console.log(data)
             r = data
         })
+        //console.log(r);
         // Console logs for testing
-        // console.log(r)
-        // console.log(r.id)
-        // console.log(r.contraseña)
-        if (r.id == id && r.contraseña == password) {
+       
+        console.log(r[0])
+        console.log(r[0].id)
+        console.log(r[0].contraseÑa +" con")
+        if (r[0].id == id && r[0].contraseÑa == password) {
             return true
         } else {
             return false
