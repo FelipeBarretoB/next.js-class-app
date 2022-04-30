@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     let data = {}
     try {
         // Esto es un pecado capital, hay que arreglar esa ruta absoluta
-        data = JSON.parse(fs.readFileSync('C:/Users/USUARIO/Desktop/Escritorio2/Proyectos/Universidad/NextJS/next.js-class-app/class-app/database/exams.json', 'utf8'));
+        data = JSON.parse(fs.readFileSync('database/exams.json', 'utf8'));
         //console.log(data.count)
         //console.log("Re sape sapetin")
         res.send(data)

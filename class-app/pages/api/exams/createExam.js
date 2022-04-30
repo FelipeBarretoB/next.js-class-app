@@ -14,7 +14,7 @@ export default async function handler(req, res) {
             // There's virtually no need to check if the id is unique or not. It is nearly impossible to have the same ID twice
             let id = randomUUID() + "-" + body.subject +  "-" + randomUUID() + "-" + fullDate
             body.exams[body.exams.length - 1].id = id
-            await fs.writeFileSync('C:/Users/USUARIO/Desktop/Escritorio2/Proyectos/Universidad/NextJS/next.js-class-app/class-app/database/exams.json', JSON.stringify(body), function(errr) {
+            await fs.writeFileSync('database/exams.json', JSON.stringify(body), function(errr) {
                 if (err) {
                     console.error('No he podido crearlo')
                 } else {
