@@ -11,6 +11,11 @@ function SolveExamsPage({ data }){
         prevQuestion >= 0 && setCurrentQuestion(prevQuestion)
     }
 
+    let handleNum = (num) => {
+        const prevQuestion = num;
+        prevQuestion >= 0 && setCurrentQuestion(prevQuestion)
+    }
+
     let handleNext = () => {
         const nextQuestion = currentQuestion + 1;
         nextQuestion < questions.length && setCurrentQuestion(nextQuestion)
@@ -32,12 +37,22 @@ function SolveExamsPage({ data }){
             {questions[currentQuestion].answers.map((answer, index) => (
                 <div key={index} className="">
                     <input type="radio" className="w-6 h-6 bg-black" name={answer.answer}/>
-                    <p>{answer.id}. {answer.answer}</p>
+                    <label>{answer.id}) {answer.answer}</label>
                 </div>
             ))}
         </div>
-        <button onClick={handlePrevious}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" onClick={handlePrevious} className="btn btn-primary">Previous</button>
+                <button type="button" onClick={ () => {handleNum(0)}} className="btn btn-primary">1</button>
+                <button type="button" onClick={ () => {handleNum(1)}} className="btn btn-primary">2</button>
+                <button type="button" onClick={ () => {handleNum(2)}} className="btn btn-primary">3</button>
+                <button type="button" onClick={ () => {handleNum(3)}} className="btn btn-primary">4</button>
+                <button type="button" onClick={ () => {handleNum(4)}} className="btn btn-primary">5</button>
+                <button type="button" onClick={handleNext} className="btn btn-primary">Next</button>
+            </div>
+        </div>
     </div>
     
 }
