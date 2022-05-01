@@ -16,10 +16,10 @@ function Formulary(props) {
         <fieldset>
             <legend>Elige la opción correcta</legend>
             <label>
-                <input type="radio" name={"pregunta-" + props.form} value="A" style={{margin: ".5em"}}/> A
-                <input type="radio" name={"pregunta-" + props.form} value="B" style={{margin: ".5em"}}/> B
-                <input type="radio" name={"pregunta-" + props.form} value="C" style={{margin: ".5em"}}/> C
-                <input type="radio" name={"pregunta-" + props.form} value="D" style={{margin: ".5em"}}/> D
+                <input type="radio" className="form-check-input" name={"pregunta-" + props.form} value="A" style={{margin: ".5em"}}/> A
+                <input type="radio" className="form-check-input" name={"pregunta-" + props.form} value="B" style={{margin: ".5em"}}/> B
+                <input type="radio" className="form-check-input" name={"pregunta-" + props.form} value="C" style={{margin: ".5em"}}/> C
+                <input type="radio" className="form-check-input" name={"pregunta-" + props.form} value="D" style={{margin: ".5em"}}/> D
             </label>
         </fieldset>
 

@@ -24,9 +24,10 @@ function SolveExamsPage({ data }){
     //const reactComp = useRef();
     //const router = useRouter();
     
-    return  <div>
+    return <div>
         <h1>Solve Exams Page</h1>
-        <p>{data.name}</p>
+        <h2>{data.name}</h2>
+        
         <div>
             <h3>Question {currentQuestion + 1} of {questions.length}</h3>
             <div>
@@ -35,13 +36,13 @@ function SolveExamsPage({ data }){
         </div>
         <div>
             {questions[currentQuestion].answers.map((answer, index) => (
-                <div key={index} className="">
-                    <input type="radio" className="w-6 h-6 bg-black" name={answer.answer}/>
-                    <label>{answer.id}) {answer.answer}</label>
+                <div key={index} className="form-check">
+                    <input type="radio" className="form-check-input" name={answer.answer}/>
+                    <label> {answer.id})&nbsp;&nbsp;&nbsp; {answer.answer}</label>
                 </div>
             ))}
         </div>
-
+        
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group me-2" role="group" aria-label="First group">
                 <button type="button" onClick={handlePrevious} className="btn btn-primary">Previous</button>
