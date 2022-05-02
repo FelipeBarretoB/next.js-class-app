@@ -14,14 +14,16 @@ function Card(props) {
     }
 
     //console.log(props.name)
-    return <div className="card border-success mb-3" style={{maxWidth: "18rem"}}>
+    //btn btn-success mb-3
+    return <div className="card border-primary" style={{maxWidth: "18rem"}}>
         <div className="card-header">{props.subject}</div>
-        <div className="card-body text-success">
+        <div className="card-body text-primary">
         <h5 className="card-title">{props.name}</h5>
         <p className="card-text">{props.description}</p>
         <input type="text" ref={idRef} style={{display : "none"}} value={props.id} readOnly/>
         {/* <p id="examId" style={{display: "none"}}>{props.id}</p> */}
-        <button onClick={handleClick} type="button" className="btn btn-success" value={props.id}>Empezar</button>
+        
+        <button onClick={handleClick} type="button" className="btn btn-primary" value={props.id}>Empezar</button>
         </div>
   </div>
 }

@@ -144,7 +144,7 @@ function CreateExamsPage() {
                 {forms.map((item) => {
                     return <Formulary key={item} form={item}/>
                 })}
-            <input type="submit"></input>
+            <input type="submit" className = "form-control"></input>
             </form>
         </div>
     </div>
