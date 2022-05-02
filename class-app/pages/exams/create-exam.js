@@ -99,7 +99,7 @@ function CreateExamsPage() {
         //let fields = e.target.elements;
         let attributes = checkAllValues()
         if(attributes[0]) {
-            console.log("Alright!")
+            /*console.log("Alright!")
             const res = await fetch("http://localhost:3000/api/exams/returnExams")
             let data = await res.json()
             console.log(data)
@@ -107,7 +107,18 @@ function CreateExamsPage() {
             newJson.exams.push(attributes[1])
             newJson.count = newJson.count + 1
             console.log(newJson)
-            writeJson(newJson)
+            */
+            let config = {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(attributes[1])
+               
+            }
+            console.log(config.body)
+            await fetch('http://localhost:3000/api/exams/createExam', config)
         } else {
             console.log("Hell Nah!")
         }
@@ -115,19 +126,7 @@ function CreateExamsPage() {
     }
 
     let writeJson = async obj => {
-        let config = {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(obj)
-        }
-        let r
-        await fetch('http://localhost:3000/api/exams/createExam', config).then(response => response.json()).then(data => {
-            r = data
-        })
-        console.log(r)
+        
     }
 
     return <div>

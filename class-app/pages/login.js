@@ -26,10 +26,9 @@ export default function login() {
         })
         //console.log(r);
         // Console logs for testing
-       
-        console.log(r[0])
-        console.log(r[0].id)
-        console.log(r[0].contraseÑa +" con")
+        //console.log(r[0])
+        //console.log(r[0].id)
+        //console.log(r[0].contraseÑa +" con")
         if (r[0].id == id && r[0].contraseÑa == password) {
             return true
         } else {
