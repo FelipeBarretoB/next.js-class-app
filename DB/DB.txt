@@ -1,0 +1,35 @@
+CREATE TABLE USERS(
+ID VARCHAR (10),
+NAME VARCHAR (30),
+MAIL VARCHAR (30),
+CONTRASEÑA VARCHAR(30),
+USERTYPE VARCHAR(30),
+PRIMARY KEY (ID)
+);
+
+Create table exam(
+	name varchar(100),
+	id varchar(100),
+	subject varchar(100),
+	description varchar(200),
+	primary key (id)
+);
+
+Create table question(
+	id varchar(100),
+	questionId varchar(100),
+	questions varchar(100),
+	correctAnswer char(1),
+	percentage numeric(3),
+	primary key(questionId),
+	constraint fk_id foreign key(id) references exam(id)
+);
+
+create table answer(
+	questionId varchar(100),
+	answerId varchar(100),
+	id char(1),
+	anwers varchar(100),
+	primary key (answerId),
+	constraint fk_questionId foreign key(questionId) references question(questionId)
+);
