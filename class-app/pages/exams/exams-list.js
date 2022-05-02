@@ -31,8 +31,8 @@ function ExamsList({ data }){
     return <div>
         <h1 className='display-3 mx-auto text-center'>Exams List</h1>
         <Link  href="/exams">Regresar</Link>
-        {data.exams.map((item) => {
-            console.log(item.name)
+        {data.map((item) => {
+            console.log(item.name +"?")
             return <Card key={item.name} name={item.name} description={item.description} subject={item.subject} id={item.id}/>
         })}
     </div>
