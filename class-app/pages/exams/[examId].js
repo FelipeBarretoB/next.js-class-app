@@ -7,7 +7,7 @@ function SolveExamsPage({ data }){
     let questions = data[1]
     let answer =data[2]
     
-    console.log(questions[0].questions)
+    //console.log(questions[0].questions)
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
     let handlePrevious = () => {
@@ -39,10 +39,11 @@ function SolveExamsPage({ data }){
             </div>
         </div>
         <div>
-            {answer.map((answer, index) => (
+            {answer[currentQuestion].map((answer, index) => (
+                
                 <div key={index} className="form-check">
-                    <input type="radio" className="form-check-input" name={answer.answer}/>
-                    <label> {answer.id})&nbsp;&nbsp;&nbsp; {answer.answer}</label>
+                    <input type="radio" className="form-check-input" name={answer.anwers}/>
+                    <label> {answer.id})&nbsp;&nbsp;&nbsp; {answer.anwers}</label>
                 </div>
             ))}
         </div>

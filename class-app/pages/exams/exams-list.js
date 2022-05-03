@@ -29,12 +29,12 @@ function Card(props) {
 }
  
 function ExamsList({ data }){
-
+    //console.log("?")
     return <div>
         <h1 className='display-3 mx-auto text-center'>Exams List</h1>
         <Link  href="/exams">Regresar</Link>
         {data.map((item) => {
-            console.log(item.name +"?")
+            //console.log(item.name +"?")
             return <Card key={item.name} name={item.name} description={item.description} subject={item.subject} id={item.id}/>
         })}
     </div>
@@ -44,7 +44,7 @@ function ExamsList({ data }){
 export async function getServerSideProps() {
     const res = await fetch("http://localhost:3000/api/exams/returnExams")
     const data = await res.json()
-    console.log(data)
+    //console.log(data)
     return { props: {data} }
 
 }
