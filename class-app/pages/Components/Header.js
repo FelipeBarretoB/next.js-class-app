@@ -1,39 +1,29 @@
 import Link from "next/link"
 
-function Header() {
-    return <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-info">
-            <div className="container-fluid">
-                <Link href="/"><a className="navbar-brand">Home</a></Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
+{/* <Link href="/"><a className="navbar-brand">Home</a></Link>
                         <Link href="/login">
                         <a className="nav-link">Accede a tu cuenta</a>
                         </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link href="/register/estudiante">
                         <a className="nav-link">Registrate como estudiante</a>
                         </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link href="/register/profesor">
                         <a className="nav-link">Registrate como profesor</a>
-                        </Link>
-                    </li>
-                </ul>
-                <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                </div>
-            </div>
+                        </Link> */}
+function Header() {
+    return  <header className="header">
+        <div className="header--title">
+            <Link href="/"><h1>Exams App</h1></Link>
+        </div>
+    
+        <nav className="menu">
+            <ul>
+            <Link href=""><li><a href="">Blog</a></li></Link>
+                <Link href=""><li><a href="">Contacto</a></li></Link>
+                <Link href=""><li><a href="" className="menu--iniciar">Iniciar Sesión</a></li></Link>
+            </ul>
         </nav>
-    </div>
+    </header>
 }
 
 export default Header;
