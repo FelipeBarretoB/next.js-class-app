@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
 
-function registerPage() {
+function registerPage(props) {
     const router = useRouter();
     const type = router.query.register
     const codeInputRef = useRef();
@@ -42,6 +42,8 @@ function registerPage() {
             let r = await fetch("http://localhost:3000/api/user/" + codeInputRef.current.value, config)
             console.log(r)
             alert(`Se agrego el nuevo `+type)
+            //props.teacher = true
+            router.push('/home')
         }
 
     }

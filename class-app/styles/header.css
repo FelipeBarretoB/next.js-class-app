@@ -57,6 +57,7 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     transition: .3s;
     border-bottom: 1px solid transparent;
+    cursor: pointer;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;

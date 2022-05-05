@@ -6,11 +6,20 @@ import '../styles/exam.css'
 
 import Header from './Components/Header'
 
+import AppProvider from '../contexts/appContext';
+import { useState } from 'react'
+
+
 function MyApp({ Component, pageProps }) {
-  return <div>
+  const [teacher, setTeacher] = useState(false)
+  return <AppProvider.Provider value={{state : {teacher: teacher}, setTeacher: setTeacher}}>
     <Header />
-    <Component {...pageProps} />
-  </div>
+    <Component {...pageProps}/>
+  </AppProvider.Provider>
+  // return <div>
+  //   <Header />
+  //   <Component {...pageProps} />
+  // </div>
 }
 
 export default MyApp
