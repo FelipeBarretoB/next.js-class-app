@@ -18,8 +18,8 @@ function Header() {
     
         <nav className="menu">
             <ul>
-                <Link href=""><li><a href="">Blog</a></li></Link>
-                <Link href=""><li><a href="">Contacto</a></li></Link>
+                <Link href="/"><li><a href="">Blog</a></li></Link>
+                <Link href="/"><li><a href="">Contacto</a></li></Link>
                 <Link href="/login"><li><a href="" className="menu--iniciar">Iniciar Sesión</a></li></Link>
                 <li><a className="menu--iniciar" target="_blank" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">c:</a></li>
             </ul>
