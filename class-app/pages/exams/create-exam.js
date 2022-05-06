@@ -131,7 +131,7 @@ function CreateExamsPage() {
 
     return <div>
         <h1 className='display-3 mx-auto text-center'>Crear Examen</h1>
-        <Link href="/exams"><a className='d-block text-center'>Regresar</a></Link>
+        {/* <Link href="/exams"><a className='d-block text-center'>Regresar</a></Link> */}
         <div className="container border border-info rounded p-3">
             <form onSubmit={handleSubmit}>
                 <label className="form-label h4">Nombre del examen</label>
@@ -143,7 +143,7 @@ function CreateExamsPage() {
                 {forms.map((item) => {
                     return <Formulary key={item} form={item}/>
                 })}
-            <input type="submit" className = "form-control"></input>
+            <input type="submit" className = "btn btn-primary form-control" value="Crear Examen"></input>
             </form>
         </div>
     </div>

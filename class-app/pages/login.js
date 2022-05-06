@@ -30,7 +30,7 @@ export default function login() {
         })
         //console.log(r);
         // Console logs for testing
-        //console.log(r[0])
+        console.log(r[0])
         //console.log(r[0].id)
         //console.log(r[0].contraseÑa +" con")
         if (r[0].id == id && r[0].contraseÑa == password) {
@@ -44,15 +44,16 @@ export default function login() {
         e.preventDefault();
         let fields = e.target.elements
         let exists = await userExists(fields.code.value, fields.studentPassword.value)
+        console.log(`Type : ${exists[1]}`)
         if (exists[0]) {
             //props.teacher = true
             //console.log(exists[1])
             if (exists[1] == 'profesor') {
                 //console.log(teacher)
-                value.setTeacher("true")
+                value.setTeacher(true)
                 //console.log(teacher)
             } else {
-                value.setTeacher("false")
+                value.setTeacher(false)
             }
             router.push('/home') // -> To Home
         } else {

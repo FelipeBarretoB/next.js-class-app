@@ -16,7 +16,7 @@ export default async function handler(req, res) {
             // There's virtually no need to check if the id is unique or not. It is nearly impossible to have the same ID twice
             let id = randomUUID() + "-" + body.subject +  "-" + randomUUID() + "-" + fullDate
             body.id = id
-            console.log(body.questions[0].answers)
+            console.log(body.questions)
 /          await db.query('insert into exam values ($1,$2,$3,$4)',[body.name,body.id,body.subject,body.description])
             
            
