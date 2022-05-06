@@ -1,8 +1,10 @@
 //import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { useState } from 'react'
 //import { useRef } from 'react'
 
 function SolveExamsPage({ data }){
+    const router = useRouter()
     //console.log(data)
     let questions = data[1]
     let answer =data[2]
@@ -23,6 +25,10 @@ function SolveExamsPage({ data }){
     let handleNext = () => {
         const nextQuestion = currentQuestion + 1;
         nextQuestion < questions.length && setCurrentQuestion(nextQuestion)
+    }
+
+    let leaveExam = () => {
+        router.push("/home")
     }
 
     //const reactComp = useRef();
@@ -59,6 +65,7 @@ function SolveExamsPage({ data }){
                 <button type="button" onClick={handleNext} className="btn btn-primary">Next</button>
             </div>
         </div>
+        <button onClick={leaveExam}>Salir del examen</button>
     </div>
     
 }
