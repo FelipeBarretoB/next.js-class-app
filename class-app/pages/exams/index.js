@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { Fragment } from "react"
 import Link from "next/link" 
-//import { useRef } from 'react'
+
 
 function ExamsPage(){
-    //const reactComp = useRef();
+    
     const router = useRouter();
     const testId = router.query.testId;
 

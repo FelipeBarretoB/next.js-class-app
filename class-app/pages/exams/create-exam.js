@@ -12,20 +12,13 @@ function About(props) {
 }
 
 function CreateExamsPage() {
-    //const reactComp = useRef();
+    
     const router = useRouter();
     const testId = router.query.testId;
     const [sape] = useState([])
     const a=1;
 
-    let handleClick = e => { 
-        e.preventDefault();
-        sape.push({name: "Sape" + a})
-        //setSape({name: "Sape1"})
-        console.log("?") 
-        a++
-        return a
-    }
+    
 
     const forms = [0,1,2,3,4];
 
@@ -46,7 +39,7 @@ function CreateExamsPage() {
             let answerD = document.getElementsByName('pregunta-'+forms[i]+"-D")[0]
             let correctAnswer = document.getElementsByName('pregunta-'+forms[i])
             let choiceMarked = false
-            //console.log(correctAnswer)
+            
             let correct = ""
             for (let j = 0; j < correctAnswer.length && !choiceMarked; j+=1) {
                 console.log(correctAnswer[j].name)
@@ -96,18 +89,10 @@ function CreateExamsPage() {
 
     let handleSubmit = async e => {
         e.preventDefault()
-        //let fields = e.target.elements;
+       
         let attributes = checkAllValues()
         if(attributes[0]) {
-            /*console.log("Alright!")
-            const res = await fetch("http://localhost:3000/api/exams/returnExams")
-            let data = await res.json()
-            console.log(data)
-            let newJson = data
-            newJson.exams.push(attributes[1])
-            newJson.count = newJson.count + 1
-            console.log(newJson)
-            */
+           
             let config = {
                 method: 'POST',
                 headers: {

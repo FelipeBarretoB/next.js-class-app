@@ -18,7 +18,7 @@ function ExamList() {
 export default function Home() {
     const value = useContext(AppContext)
     let { teacher } = value.state
-    //console.log(teacher)
+   
 
     return <div>
         <h1>Sape Home</h1>

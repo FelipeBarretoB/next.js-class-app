@@ -1,14 +1,14 @@
-//import { useRouter } from "next/router";
+
 import { usuarios } from "../../../users/usuarios"
 import db from "../../../util/database";
-//profesor
+
 
 
 export default async function handler(req, res) {
     const { method, body } = req;
     
     if (method === 'POST') {
-        //console.log(req)
+ 
 
         usuarios.push({
             id: body.id,

@@ -1,4 +1,4 @@
-// import { Fragment } from "react"
+
 import Link from "next/link" // para que no se refresque la pagina
 import { useRouter } from "next/router";
 import users from '../users/usuarios'
@@ -12,9 +12,6 @@ export default function login() {
     const router = useRouter()
 
     async function userExists(id, password){
-        // const res = await fetch("http://localhost:3000/api/return/"+id)
-        // const r = await res.json();
-        // return r
         let config = {
             method: 'GET',
             headers: {
@@ -22,17 +19,12 @@ export default function login() {
                 'Content-Type': 'application/json'
             },
         }
-        // console.log(id)
+        
         let r = {};
         await fetch("http://localhost:3000/api/user/" + id, config).then(response => response.json()).then(data => {
-            //console.log(data)
             r = data
         })
-        //console.log(r);
-        // Console logs for testing
         console.log(r[0])
-        //console.log(r[0].id)
-        //console.log(r[0].contraseÑa +" con")
         if (r[0].id == id && r[0].contraseÑa == password) {
             return [true, r[0].usertype]
         } else {
@@ -46,12 +38,11 @@ export default function login() {
         let exists = await userExists(fields.code.value, fields.studentPassword.value)
         console.log(`Type : ${exists[1]}`)
         if (exists[0]) {
-            //props.teacher = true
-            //console.log(exists[1])
+            
             if (exists[1] == 'profesor') {
-                //console.log(teacher)
+               
                 value.setTeacher(true)
-                //console.log(teacher)
+                
             } else {
                 value.setTeacher(false)
             }

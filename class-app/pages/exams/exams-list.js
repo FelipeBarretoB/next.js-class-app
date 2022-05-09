@@ -10,11 +10,10 @@ function Card(props) {
     let handleClick = e => {
         console.log(idRef.current.value)
         router.push("/exams/" + idRef.current.value);
-        //console.log("Doest nothing yet. Needs to show the exam")
+        
     }
 
-    //console.log(props.name)
-    //btn btn-success mb-3
+
     return <div className="card border-primary" style={{maxWidth: "18rem"}}>
         <div className="card-header">{props.subject}</div>
         <div className="card-body text-primary">
@@ -29,12 +28,12 @@ function Card(props) {
 }
  
 function ExamsList({ data }){
-    //console.log("?")
+    
     return <div>
         <h1 className='display-3 mx-auto text-center'>Exams List</h1>
         <Link  href="/home">Regresar</Link>
         {data.map((item,index) => {
-            //console.log(item.name +"?")
+           
             return <Card key={item.name + index} name={item.name} description={item.description} subject={item.subject} id={item.id}/>
         })}
     </div>
@@ -44,9 +43,8 @@ function ExamsList({ data }){
 export async function getServerSideProps() {
     const res = await fetch("http://localhost:3000/api/exams/returnExams")
     const data = await res.json()
-    //console.log(data)
+  
     return { props: {data} }
 
 }
 export default ExamsList;
-// export default PageSape;

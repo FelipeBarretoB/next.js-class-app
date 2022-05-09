@@ -16,10 +16,6 @@ function MyApp({ Component, pageProps }) {
     <Header />
     <Component {...pageProps}/>
   </AppProvider.Provider>
-  // return <div>
-  //   <Header />
-  //   <Component {...pageProps} />
-  // </div>
 }
 
 export default MyApp

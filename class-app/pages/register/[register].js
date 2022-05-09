@@ -42,7 +42,7 @@ function registerPage(props) {
             let r = await fetch("http://localhost:3000/api/user/" + codeInputRef.current.value, config)
             console.log(r)
             alert(`Se agrego el nuevo `+type)
-            //props.teacher = true
+           
             router.push('/home')
         }
 
