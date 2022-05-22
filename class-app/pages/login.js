@@ -1,7 +1,7 @@
 
 import Link from "next/link" // para que no se refresque la pagina
 import { useRouter } from "next/router";
-import users from '../users/usuarios'
+//import users from '../users/usuarios'
 import AppContext from '../contexts/appContext'
 import { useContext } from "react";
 
